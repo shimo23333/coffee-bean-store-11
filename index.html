@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!--讓網頁在手機上有正確的顯示比例-->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="css/css.css" />
+        <!--icon的連結-->
+        <link
+            rel="stylesheet"
+            href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+    </head>
+
+    <body>
+        <!--電腦選單-->
+        <nav class="nav" id="nav" onclick="navClick(event)">
+            <div class="container row0">
+                <div class="nav_container_grid">
+                    <img class="logo" src="images/logo.jpg" />
+                    <ul class="menu">
+                        <li>
+                            <a href="#">
+                                <div class="item active">Shop All</div></a
+                            >
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="item">Save on Bundles</div></a
+                            >
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="item">Plastic Offsets</div></a
+                            >
+                        </li>
+                        <li>
+                            <a href="#"> <div class="item">Account</div></a>
+                        </li>
+                        <li>
+                            <a href="#"> <div class="item">Cart</div></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--手機選單-->
+        <div class="phone-bar">
+            <div class="mobile-header">
+                <a href="#"><img class="logo" src="images/logo.jpg" /></a>
+            </div>
+            <!--切換選單的按鈕-->
+            <div class="toggle" onclick="showMenu()">
+                <span class="material-symbols-outlined">menu</span>
+            </div>
+        </div>
+
+        <div class="row1">
+            <div class="container row1">
+                <div class="container_grid">
+                    <div class="container_grid_left">
+                        <div>
+                            <h1>
+                                <div class="title">The Best</div>
+                                <div class="title green">Vietnamese</div>
+                                <div class="title">Coffee</div>
+                            </h1>
+                            <h2>
+                                <div class="subtitle">
+                                    We Are The First Coffee Business In The UK
+                                    To Source, Blend, Roast and Import
+                                    Vietnamese Coffee, Direct From Vietnam Since
+                                    2006.
+                                </div>
+                            </h2>
+                            <a href="#"
+                                ><div class="row1-botton">Buy Now</div></a
+                            >
+                        </div>
+                        <div class="img_grid">
+                            <img class="img" src="images/main-photo.jpg" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <img class="img left" src="images/acup.jpg" />
+                        <div class="coffee-focus-title">
+                            Vietnamese Coffee With The Passion And Integrity
+                        </div>
+                        <div class="coffee-focus">
+                            <div class="coffee-focus_grid">
+                                <div>
+                                    <img
+                                        class="coffee-icon"
+                                        src="images/icon.jpg"
+                                    />
+                                </div>
+                                <div class="subtitle right">
+                                    Our House Coffee is Rich, Strong, Chocolatey
+                                    And Nutty.
+                                </div>
+                            </div>
+                            <div class="coffee-focus_grid">
+                                <div>
+                                    <img
+                                        class="coffee-icon"
+                                        src="images/icon.jpg"
+                                    />
+                                </div>
+                                <div class="subtitle">
+                                    Ideal For Ca Phe Sua Da, Iced Coffee, Hot
+                                    With Condensed Milk Or Just Plain Black.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="container row2">
+                <div class="row2-container_grid">
+                    <div class="arear">
+                        <img class="commodity" src="images/product-01.png" />
+                        <div>
+                            <div class="botton-title">
+                                Ca Phe Mit (Lyberica)
+                            </div>
+                            <div class="botton-subtitle">
+                                Lyberica With The Story "Nagay Nang Chay" -
+                                Sunny Day
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arear">
+                        <img class="commodity" src="images/product-02.png" />
+                        <div>
+                            <div class="botton-title">Ca Phe Voi (Robusta)</div>
+                            <div class="botton-subtitle">
+                                Robusta With The Story "Dem Thao Thuc" - Night
+                                Awake
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arear">
+                        <img class="commodity" src="images/product-03.png" />
+                        <div>
+                            <div class="botton-title">Ca Phe Che (Arabica)</div>
+                            <div class="botton-subtitle">
+                                Arabica With The Story "Chon Phieu Luu"
+                                Adventure
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arear-img"></div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            // 切換顯示選單
+            function showMenu() {
+                // 要對按鈕做的事
+                var n = document.getElementById("nav"); // 取得電腦選單nav
+                n.className = "nav active"; // 改變成nav且active的樣式
+            }
+            function hideMenu() {
+                // 要對按鈕做的事
+                var n = document.getElementById("nav"); // 取得電腦選單nav
+                n.className = "nav"; // 改變成nav
+            }
+
+            function navClick(event) {
+                console.log(event.target.id);
+                if (event.target.id == "nav") {
+                    hideMenu();
+                }
+            }
+        </script>
+    </body>
+</html>
