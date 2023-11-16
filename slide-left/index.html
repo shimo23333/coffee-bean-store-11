@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<style type="text/css">
+
+		* {
+			box-sizing: border-box; /* padding 是往內算 */
+		}
+		
+		body {
+			margin: 0;
+			padding: 0;
+			font-size: 12pt;
+			background: #f2e5d3;
+			font-family: sans-serif;
+		}
+
+		.mobile-header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			display: grid;
+			height: 60px;
+			line-height: 60px;
+			grid-template-columns: 60px auto;
+			background: #fff;
+		}
+
+		.mobile-header > .menu-btn {
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+			padding-top: 7px;
+			text-align: center;
+		}
+
+		.nav {
+			position: fixed;
+			display: block;
+			top:  0;
+			left:  -100vw;
+			width: 100vw;
+			height: 100%;
+			transition: 1s;
+		}
+
+		.nav.active {
+			top:  0;
+			left:  0;
+			width: 100vw;
+			height: 100%;
+			background-color: rgba(0,0,0,0.5);
+		}
+
+		.nav .panel {
+			display: block;
+			position: relative;
+			background: #fff;
+			width: 70%;
+			height: 100%;
+			box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+		}
+
+		.nav .brand {
+			padding: 30px 20px;
+			font-size: 15pt;
+			font-weight: bold;
+		}
+
+		.nav .menu {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.nav .menu > li > a {
+			display: block;
+			padding: 15px 20px;
+			text-decoration: none;
+			color:  #000;
+		}
+
+		
+
+
+	</style>
+</head>
+<body>
+
+	<!-- 手機 -->
+	<div class="mobile-header">
+		<div class="menu-btn" onclick="showNav()"><span class="material-symbols-outlined">menu</span></div>
+		<div>My Website</div>
+	</div>
+
+	<!-- 主選單 -->
+	<nav class="nav" id="nav" onclick="navClick(event)">
+		<div class="panel" id="peter">
+			<div class="brand">My Website</div>
+			<ul class="menu">
+				<li><a href="">Home</a></li>
+				<li><a href="">About Us</a></li>
+				<li><a href="">Works</a></li>
+				<li><a href="">Contact</a></li>
+				<li><a href="">More</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<script type="text/javascript">
+		
+		function showNav() {
+			var nav = document.getElementById("nav");
+			nav.classList.add('active');
+		}
+
+		function hideNav() {
+			var nav = document.getElementById("nav");
+			nav.classList.remove('active');
+		}
+
+		function navClick(event) {
+			if (event.target.id == 'nav') {
+				hideNav();
+			}
+		}
+
+	</script>
+</body>
+</html>
