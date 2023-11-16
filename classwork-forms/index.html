@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!--讓網頁在手機上有正確的顯示比例-->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title></title>
+        <style type="text/css">
+            .myTable {
+                border-top: 1px solid #000;
+                border-right: 1px solid #000;
+            }
+
+            .myTable th,
+            .myTable td {
+                border-bottom: 1px solid #000;
+                border-left: 1px solid #000;
+                background-color: yellowgreen;
+                padding: 5px;
+            }
+
+            .myTable thead th {
+                background-color: #ccc;
+            }
+
+            .myTable tfoot td {
+                background-color: #ccc;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Table 表格</h1>
+
+        <!--表格開始-->
+        <table class="myTable" cellpadding="0" cellspacing="0">
+            <!--表格標題-->
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>英文</th>
+                    <th>數學</th>
+                </tr>
+            </thead>
+
+            <!--表格內容(很多行)-->
+            <tbody>
+                <tr>
+                    <td>Peter</td>
+                    <td>80</td>
+                    <td>70</td>
+                </tr>
+
+                <tr>
+                    <td>Marry</td>
+                    <td>60</td>
+                    <td>50</td>
+                </tr>
+
+                <tr>
+                    <td>John</td>
+                    <td>88</td>
+                    <td>56</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>總分</td>
+                    <td>300</td>
+                    <td>250</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
